@@ -8,7 +8,6 @@
 body {
     font-family: 'Mantou', Arial, sans-serif;
     margin: 0;
-    font-family: Arial, sans-serif;
     background: linear-gradient(45deg, pink, white);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
@@ -31,7 +30,6 @@ h1 {
 
 ul {
     font-family: 'Mantou', serif;
-    /* list-style-type: none; */
     margin: 10px 250px;
     font-size: 2rem;
 }
@@ -40,13 +38,51 @@ ul {
 @keyframes blink-caret {
     from, to { border-color: transparent; }
     50% { border-color: black; }
-  }
-  
-  #typed {
+}
+
+#typed {
     margin: 200px 0;
     font-size: 11rem; /* 調整字體大小以配合動畫 */
     text-align: center;
     /* border-right: 2px solid black; 保留光標效果 */
     animation: blink-caret 0.75s step-end infinite; /* 僅保留閃爍光標 */
-  }
-  
+}
+
+/* 響應式設計調整 */
+@media (max-width: 768px) {
+    h1, h2, h3, ul {
+        margin: 10px 20px; /* 減少邊距以適應手機螢幕 */
+    }
+
+    h1 {
+        font-size: 2.5rem; /* 減小標題字體大小 */
+    }
+
+    ul {
+        font-size: 1.5rem; /* 減小列表字體大小 */
+    }
+
+    #typed {
+        margin: 100px 0;
+        font-size: 6rem; /* 減小動畫字體大小 */
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2, h3, ul {
+        margin: 10px 10px; /* 進一步減少邊距 */
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    ul {
+        font-size: 1.2rem;
+    }
+
+    #typed {
+        margin: 50px 0;
+        font-size: 4rem;
+    }
+}
