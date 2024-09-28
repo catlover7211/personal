@@ -1,6 +1,7 @@
 @font-face {
     font-family: "Mantou";
-    src: url(../font/MantouSans-Regular.ttf);
+    src: url(../font/MantouSans-Regular.ttf) format('truetype');
+    font-display: swap; /* 提高字體加載性能 */
 }
 
 /* 應用自訂字體到全站 */
@@ -8,43 +9,32 @@ body {
     font-family: 'Mantou', Arial, sans-serif;
     margin: 0;
     font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, pink, white);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
 }
 
-nav a {
-    color: inherit; /* 移除超連結顏色 */
-    display: block; /* 讓 <a> 填滿 <li> */
-    font-size: 1.2rem;
-    padding: 10px;
-    text-decoration: none; /* 移除超連結底線 */
-    
-    
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 30%; }
+    100% { background-position: 0% 50%; }
 }
 
-/* 滑鼠移到 `<a>` 時變成深底淺色 */
-nav a:hover {
-    background-color: black;
-    color: white;
+h1, h2, h3 {
+    font-family: 'Mantou', serif;
+    margin: 10px 250px;
 }
 
-nav > ul {
-    background-color: rgb(224, 197, 197);
-    list-style: none; /* 移除項目符號 */
-    margin: 0;
-    padding: 0;
-
-    
-}
-nav > ul > li > img {
-    display: flex;
-    padding: 13px;
+h1 {
+    font-size: 4rem;
 }
 
-.flex-nav {
-    display: flex;
-    justify-content: center
+ul {
+    font-family: 'Mantou', serif;
+    /* list-style-type: none; */
+    margin: 10px 250px;
+    font-size: 2rem;
 }
-
-
 
 /* 移除 .typing-effect 類別及其相關動畫 */
 @keyframes blink-caret {
@@ -53,9 +43,10 @@ nav > ul > li > img {
   }
   
   #typed {
-      font-size: 11rem; /* 調整字體大小以配合動畫 */
-      text-align: center;
-      /* border-right: 2px solid black; 保留光標效果 */
-      animation: blink-caret 0.75s step-end infinite; /* 僅保留閃爍光標 */
+    margin: 200px 0;
+    font-size: 11rem; /* 調整字體大小以配合動畫 */
+    text-align: center;
+    /* border-right: 2px solid black; 保留光標效果 */
+    animation: blink-caret 0.75s step-end infinite; /* 僅保留閃爍光標 */
   }
   
