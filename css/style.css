@@ -1,3 +1,15 @@
+@font-face {
+    font-family: "Mantou";
+    src: url(../font/MantouSans-Regular.ttf);
+}
+
+/* 應用自訂字體到全站 */
+body {
+    font-family: 'Mantou', Arial, sans-serif;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
 nav a {
     color: inherit; /* 移除超連結顏色 */
     display: block; /* 讓 <a> 填滿 <li> */
@@ -34,28 +46,16 @@ nav > ul > li > img {
 
 
 
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-.typing-effect {
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid;
-  animation: typing 2s steps(20, end), blink-caret 0.75s step-end infinite;
-}
-
+/* 移除 .typing-effect 類別及其相關動畫 */
 @keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { border-color: black; }
-}
-
-
-h1{
-    font-size: 11rem;
-    text-align: center;
-}
-
-
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+  }
+  
+  #typed {
+      font-size: 11rem; /* 調整字體大小以配合動畫 */
+      text-align: center;
+      /* border-right: 2px solid black; 保留光標效果 */
+      animation: blink-caret 0.75s step-end infinite; /* 僅保留閃爍光標 */
+  }
+  
