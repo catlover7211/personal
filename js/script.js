@@ -13,13 +13,21 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-// 當整個頁面加載完成後執行
-window.addEventListener('load', function() {
-    // 隱藏載入動畫
-    var loader = document.getElementById('loader');
-    loader.style.display = 'none';
+// script.js
 
-    // 顯示主內容
+window.addEventListener('load', function() {
+    console.log('頁面已完全加載'); // 添加日誌以確認事件觸發
+    var loader = document.getElementById('loader');
+    if (loader) {
+        loader.classList.add('hidden');
+    } else {
+        console.error('找不到 loader 元素');
+    }
+
     var content = document.getElementById('content');
-    content.style.display = 'block';
+    if (content) {
+        content.style.display = 'block';
+    } else {
+        console.error('找不到 content 元素');
+    }
 });
