@@ -48,3 +48,63 @@ window.addEventListener('load', function() {
     }
     
 });
+
+// 定義桌面斷點（以像素為單位）
+const DESKTOP_BREAKPOINT = 768;
+
+// 獲取模態框元素
+const modal = document.getElementById('modal');
+const modalImg = document.getElementById('modal-image');
+const captionText = document.getElementById('caption');
+const closeBtn = document.querySelector('.close');
+
+// 獲取所有縮略圖
+const thumbnails = document.querySelectorAll('.thumbnail');
+
+// 定義事件處理器
+const openModal = (event) => {
+    modal.style.display = 'block';
+    modalImg.src = event.target.src;
+    captionText.innerHTML = event.target.alt;
+};
+
+const closeModal = () => {
+    modal.style.display = 'none';
+};
+
+// 函數：根據螢幕大小啟用或禁用模態框功能
+const updateEventListeners = () => {
+    if (window.innerWidth >= DESKTOP_BREAKPOINT) {
+        // 啟用模態框功能：添加點擊事件監聽器
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', openModal);
+            thumbnail.style.cursor = 'pointer'; // 確保游標是手型
+        });
+    } else {
+        // 禁用模態框功能：移除點擊事件監聽器
+        thumbnails.forEach(thumbnail => {
+            thumbnail.removeEventListener('click', openModal);
+            thumbnail.style.cursor = 'default'; // 改變游標樣式
+        });
+        // 確保模態框被關閉
+        closeModal();
+    }
+};
+
+// 初始載入時設定事件監聽器
+updateEventListeners();
+
+// 當視窗大小改變時更新事件監聽器
+window.addEventListener('resize', () => {
+    updateEventListeners();
+});
+
+// 點擊關閉按鈕關閉模態框
+closeBtn.addEventListener('click', closeModal);
+
+// 點擊模態框背景區域也可以關閉
+window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        closeModal();
+    }
+});
