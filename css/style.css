@@ -64,6 +64,11 @@ ul {
     padding: 10px;
 }
 
+.gallery h1 {
+    margin: 10px 0;
+    font-weight: 100;
+}
+
 .gallery img {
     width: 33%;
     height: auto;
@@ -120,6 +125,9 @@ ul {
 
     .gallery img {
         width: 100%;
+    }
+    .gallery h1 {
+        font-size: 3rem;
     }
 }
 

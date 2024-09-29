@@ -37,10 +37,14 @@ window.addEventListener('load', function() {
         console.error('找不到 loader 元素');
     }
 
-    var content = document.getElementById('content');
-    if (content) {
-        content.style.display = 'block';
+    var contents = document.getElementsByClassName('content');
+
+    if (contents.length > 0) {
+        for (var i = 0; i < contents.length; i++) {
+            contents[i].style.display = 'block';
+        }
     } else {
-        console.error('找不到 content 元素');
+        console.error('找不到具有 content 類別的元素');
     }
+    
 });
