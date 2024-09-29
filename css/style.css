@@ -117,3 +117,22 @@ ul {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+
+footer {
+    /* background-color: #f8f8f8; 淡色背景 */
+    color: #888888; /* 淺灰色文字 */
+    text-align: center;
+    padding: 10px 0;
+    font-size: 12px; /* 小字體 */
+    /* border-top: 1px solid #e7e7e7; 輕微的上邊框 */
+    
+}
+footer a {
+    color: #888888;
+    text-decoration: none;
+    margin: 0 5px;
+}
+footer a:hover {
+    text-decoration: underline;
+}
