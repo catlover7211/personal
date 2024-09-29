@@ -11,3 +11,15 @@ document.addEventListener("DOMContentLoaded", function() {
         cursorChar: '|',
     });
 });
+
+
+// 當整個頁面加載完成後執行
+window.addEventListener('load', function() {
+    // 隱藏載入動畫
+    var loader = document.getElementById('loader');
+    loader.style.display = 'none';
+
+    // 顯示主內容
+    var content = document.getElementById('content');
+    content.style.display = 'block';
+});
