@@ -70,7 +70,7 @@ ul {
 
 @media (max-width: 480px) {
     h1, h2, h3, ul {
-        margin: 10px 10px; /* 進一步減少邊距 */
+        margin: 10px 50px; /* 進一步減少邊距 */
     }
 
     h1 {
@@ -82,7 +82,7 @@ ul {
     }
 
     #typed {
-        margin: 50px 0;
+        margin: 340px 0;
         font-size: 4rem;
     }
 }
