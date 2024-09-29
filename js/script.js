@@ -10,8 +10,21 @@ document.addEventListener("DOMContentLoaded", function() {
         showCursor: false,
         cursorChar: '|',
     });
+    
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    var typed_phpto = new Typed('#typed_photo', {
+        strings: ["Photos."],
+        typeSpeed: 250, // 打字速度
+        backSpeed: 50, // 刪除速度
+        backDelay: 1000, // 刪除前的等待時間
+        loop: false, // 是否循環
+        showCursor: false,
+        cursorChar: '|',
+    });
+
+});
 
 // script.js
 

@@ -48,6 +48,15 @@ ul {
     animation: blink-caret 0.75s step-end infinite; /* 僅保留閃爍光標 */
 }
 
+#typed_photo {
+    margin: 200px 0;
+    font-size: 11rem; /* 調整字體大小以配合動畫 */
+    text-align: center;
+    /* border-right: 2px solid black; 保留光標效果 */
+    animation: blink-caret 0.75s step-end infinite; /* 僅保留閃爍光標 */
+}
+
+
 /* 響應式設計調整 */
 @media (max-width: 768px) {
     h1, h2, h3, ul {
