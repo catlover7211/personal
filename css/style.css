@@ -248,3 +248,16 @@ footer a:hover {
     text-decoration: underline;
 }
 
+
+
+.no-underline {
+    text-decoration: none;
+    color: inherit;
+}
+
+.no-underline:visited,
+.no-underline:hover,
+.no-underline:active {
+    text-decoration: none;
+    color: inherit;
+}
