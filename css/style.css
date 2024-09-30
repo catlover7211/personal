@@ -280,6 +280,8 @@ footer a:hover {
 
 /* 切換按鈕的基本樣式 */
 .theme-toggle {
+    font-family: "Mantou", serif;
+    font-weight: 100;
     position: fixed; /* 固定位置 */
     top: 20px; /* 距離頂部 */
     right: 20px; /* 距離右側 */
