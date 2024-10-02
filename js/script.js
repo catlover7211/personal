@@ -19,9 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const updateToggleButtonText = () => {
         toggleButtons.forEach(button => {
             if (document.body.classList.contains('dark-mode')) {
-                button.textContent = '切換回淺色模式';
+                button.textContent = '淺色模式';
             } else {
-                button.textContent = '切換深色模式';
+                button.textContent = '深色模式';
             }
         });
     };
