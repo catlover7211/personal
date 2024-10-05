@@ -9,6 +9,8 @@
     --link-hover-color: #555555;
     --button-background: #ffffff;
     --button-color: #000000;
+
+    --pink-color: #9c3975;
     /* 添加更多變量根據需要 */
 }
 
@@ -21,7 +23,18 @@ body.dark-mode {
     --link-hover-color: #ecf0f1;
     --button-background-dark: #333333;
     --button-color-dark: #ffffff;
+
+    --pink-color: #fe8637;
     /* 覆蓋更多變量根據需要 */
+}
+
+/* h1粉字 */
+.pink{
+    color: var(--pink-color);
+}
+
+.pink.dark-mode {
+    color: var(--pink-color);
 }
 
 /* 基本樣式 */
